@@ -37,4 +37,8 @@ public class OrderService {
   public List<Ordering> getList(){
     return orderRepository.findAll();
   }
+
+  public List<Ordering> getList2(){
+    return orderRepository.selectAllSQL();
+  }
 }

@@ -37,6 +37,20 @@ public class OrderController {
         );
     Ordering o = new Ordering();
     o.setOrder_id(ordering.getOrder_id());
+    o.setProduct_name(ordering.getProduct_name());
+    o.setOptions(ordering.getOptions());
+    o.setTable_no(ordering.getTable_no());
+    o.setQuantity(ordering.getQuantity());
+    o.setOrder_date(ordering.getOrder_date());
+    o.setOrder_time(ordering.getOrder_time());
+    o.setDate_time(ordering.getDate_time());
+    o.setRobot_status(ordering.getRobot_status());
+    o.setDong(ordering.getDong());
+    o.setHo(ordering.getHo());
+    o.setSeq(ordering.getSeq());
+    o.setOrderer_name(ordering.getOrderer_name());
+    //return "<pre>"+  +"<pre/>주문번호:"+ordering.getOrder_id()+"  : 수신";
+
     return o;
   }
 
@@ -46,8 +60,8 @@ public class OrderController {
   @RequestMapping("/list")
   @ResponseBody
   public List<Ordering> list(Model model) {
-//  public String list() {
-    List<Ordering> orderList = orderService.getList();
+    List<Ordering> orderList = orderService.getList2();
+
     return orderList;
   }
 
